@@ -37,7 +37,7 @@ var handleRequest = function(request, response){
     response.writeHead( zombiedText.status , {'Content-Type':'text/html'} );
 
        if ( zombiedText.text ) {
-           response.end( purl.query.inputtext + ':'  + zombiedText.text + '' );
+           response.end( purl.query.inputtext + ' : '  + zombiedText.text + '' );
        } else {
            response.end( zombiedText.message + '' );
        }
@@ -52,7 +52,7 @@ var handleRequest = function(request, response){
     response.writeHead( unzombiedText.status , {'Content-Type':'text/html'} );
 
        if ( unzombiedText.text ) {
-           response.end(purl.query.inputtext + ':' + unzombiedText.text + '' );
+           response.end(purl.query.inputtext + ' : ' + unzombiedText.text + '' );
        } else {
            response.end( unzombiedText.message + '' );
        }
