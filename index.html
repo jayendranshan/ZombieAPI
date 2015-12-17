@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Zombie API</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Zombie API</h2>
+        <div class="row well">
+            <div class="col-md-6">
+                <form id="english-to-zombie-form">
+                    <h5><label for="english" class="text-success">English</label></h5>
+                    <textarea class="form-control" id="english"></textarea>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <form id="zombie-to-english-form">
+                    <h5><label for="zombie" class="text-success" >Zombie</label></h5>
+                    <textarea class="form-control" id="zombie"></textarea>
+                </form>
+            </div>
+
+            <div class="col-md-4" style="margin-top:20px;vertical-align: middle;">
+                <button class="btn btn-primary" id="btnZombie" Text="Zombify">Zombify</button>
+                <a ng-href="/#/zombify/{{ person.id }}">Click here to get the zombified text</a>
+            </div>
+
+            <div class="col-md-4" style="margin-top:20px;vertical-align: middle;">
+                <button class="btn btn-primary" id="btnZombie" Text="Zombify">Zombify</button>
+                <a ng-href="/#/unzombify/{{ person.id }}">Click here to get the unzombified text</a>
+            </div>
+
+        </div>
+
+    
+    <!--<div class="col-md-6">
+        <button class="form-control" id="btnUnZombie" Text="UnZombify">UnZombify</button>
+    </div>-->
+
+    </div>
+</body>
+</html>
