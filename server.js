@@ -4,12 +4,12 @@ var url = require('url');
 
 var logger = require('./js/logger');
 var markdownTrans = require('./js/markdownTransformer');
-var translator = require('./js/Translator');
+//var translator = require('./js/Translator');
 
 var handleMarkdown = function(filename, response){
   response.writeHead(200, {'Content-Type': 'text/html'});
   var file = fs.createReadStream(filename);
-  file.pipe(markdownTransformer()).pipe(response);
+  file.pipe(markdownTrans()).pipe(response);
 };
 
 
@@ -20,7 +20,7 @@ var handleRequest = function(request, response){
   if(request.url === '/'){
     response.writeHead(200, {'Content-Type': 'text/html'});
     var file = fs.createReadStream('Home.md');
-    file.pipe(markdownTransformer()).pipe(response);
+    file.pipe(markdownTrans()).pipe(response);
     file.on("finished", function(){
       response.end();
     });
@@ -37,8 +37,8 @@ var handleRequest = function(request, response){
 
 var server = http.createServer( handleRequest );
 
-server.listen(3000, function(){
-    console.log("listening on 3000");
+server.listen(7000, function(){
+    console.log("listening on 7000");
 });
 
 
